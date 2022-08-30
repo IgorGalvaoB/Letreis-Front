@@ -1,5 +1,5 @@
 import { useState } from "react";
-import EmptySquare from "./ui/EmptySquare";
+import EmptySquare from "./ui/AnimatedItem";
 
 function Letrix() {
   const [change,setChange] = useState(false)
