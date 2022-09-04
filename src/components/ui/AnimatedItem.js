@@ -1,18 +1,51 @@
 import { useMemo } from 'react'
 import { styled, useTheme } from '@mui/material/styles';
-import { keyframes, Box, Typography } from '@mui/material'
-
-
-
-const EmptySquare = ({ isAnimated, key, delay, stage}) => {
+import { keyframes, Box } from '@mui/material'
+import EmptySquare from './EmptySquare.js'
+const AnimatedItem = ({ isAnimated, key, delay, stage, successAnimated}) => {
 
     const theme = useTheme()
-    const time = delay||key*0.7 
+    const delayTime = key*0.7 
+    
+    const ContainerBox = styled(Box)(() => ({
 
-    const stageOne = ()=>{}
-    const stageTwo = ()=>{}
-    const stageThree = ()=>{}
-    const stageFour = ()=>{}
+        width: '100%',
+        aspectRatio:'1/1',
+        transformStyle: 'preserve-3d',
+        animation: isAnimated&&`${flipAnimation} 0.7s ${delayTime}s linear both`,
+        animation: successAnimated&&`${successAnimation} 0.7 linear both`,
+        'z-index': 1,
+
+    }))
+    
+    const stageOne = ()=>{
+        return (
+            <ContainerBox>
+                <EmptySquare/>
+            </ContainerBox>
+        )
+    }
+    const stageTwo = ()=>{
+        return(
+            <ContainerBox>
+                <EmptySquare/>
+                <InputSquare/>
+            </ContainerBox>
+        )
+    }
+    const stageThree = ()=>{
+        return(
+            <ContainerBox>
+                <InputSquare/>
+                <FilledSquare/>
+            </ContainerBox>
+        )
+    }
+    const stageFour = ()=>{
+        <ContainerBox>
+            <FilledSquare/>
+        </ContainerBox>
+    }
 
     const flipAnimation  = keyframes`
         0% {
@@ -24,28 +57,24 @@ const EmptySquare = ({ isAnimated, key, delay, stage}) => {
             transform: rotateX(180deg);
         },
     `
-    const successAnimation = keyframes`
-        0%{
 
+    const successAnimation = keyframes`
+
+        0%{
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
         }
         50%{
-
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
         }
         100%{
-
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
         }
     
     `
     
-    const ContainerBox = styled(Box)(() => ({
-
-        width: '100%',
-        aspectRatio:'1/1',
-        transformStyle: 'preserve-3d',
-        animation: isAnimated&&`${animation} 0.7s ${time}s linear both`,
-        'z-index': 1,
-
-    }))
 
     const Container = styled(Box)(() => ({
         
@@ -65,4 +94,4 @@ const EmptySquare = ({ isAnimated, key, delay, stage}) => {
         </Container>
     )
 }
-export default EmptySquare
+export default AnimatedItem

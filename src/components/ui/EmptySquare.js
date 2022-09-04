@@ -1,3 +1,6 @@
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
 const EmptySquare = ()=>{
     
     const emptySquare = styled(Box)(({ theme }) => ({
@@ -17,4 +20,5 @@ const EmptySquare = ()=>{
     )
 
 }
+export default EmptySquare
 

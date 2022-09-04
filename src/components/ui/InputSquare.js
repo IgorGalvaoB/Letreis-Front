@@ -1,13 +1,13 @@
 import Box  from '@mui/material/Box';
 import { styled } from '@mui/material/styles'
 import { useContext } from 'react';
-
+//import { Values } from './ContainerGrid.js'
 
 const InputSquare = ({ value, key, stage})=>{
     const { word, select, selectFunc } = useContext(Values) 
     const letter = value||word[key]
     const selected = select === key
-    const flip = stage !== 3 
+    const flip = stage !== 2 
 
     const handleClick = ( )=>{
 

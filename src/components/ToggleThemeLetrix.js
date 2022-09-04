@@ -9,7 +9,7 @@ export const ThemeContext = createContext({})
 const ToggleThemeLetrix = () => {
     const [selectedTheme, setSelectedTheme] = useState(Themes.lightTheme)
     
-
+    
     const toggleTheme = () => {
         setSelectedTheme((preTheme) => preTheme.palette.mode === 'dark' ? Themes.lightTheme : Themes.darkTheme)
     }
