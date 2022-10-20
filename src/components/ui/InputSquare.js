@@ -1,21 +1,22 @@
+import { Typography } from '@mui/material';
 import Box  from '@mui/material/Box';
 import { styled } from '@mui/material/styles'
 import { useContext } from 'react';
 //import { Values } from './ContainerGrid.js'
 
-const InputSquare = ({ value, key })=>{
-    const { word, select, selectFunc } = useContext(Values) 
-    const letter = value||word[key]
-    const selected = select === key
+const InputSquare = ({ value, id })=>{
+    //const { word, select, selectFunc } = useContext(Values) 
+    const letter = value//||word[id]
+    const selected = false//select === id
     
 
-    const handleClick = ( )=>{
+    /* const handleClick = ( )=>{
 
         selectFunc(key)
 
-    }
+    } */
 
-    const inputSquare = styled(Box)(({ theme }) => ({
+    const StyBox = styled(Box)(({ theme }) => ({
               
         backgroundColor: theme.palette.background.default,
         border: theme.shape.border.main,
@@ -34,12 +35,16 @@ const InputSquare = ({ value, key })=>{
         }
     
     }))
-    
+    const StyTypography = styled(Typography)(({ theme }) => ({
+
+    }))
     return(
 
-        <inputSquare onClick={handleClick}>
-            {letter}
-        </inputSquare>
+        <StyBox>
+            <StyTypography>
+                {letter}
+            </StyTypography>
+        </StyBox>
 
     )
 }
