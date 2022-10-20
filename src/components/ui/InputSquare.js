@@ -3,11 +3,11 @@ import { styled } from '@mui/material/styles'
 import { useContext } from 'react';
 //import { Values } from './ContainerGrid.js'
 
-const InputSquare = ({ value, key, stage})=>{
+const InputSquare = ({ value, key })=>{
     const { word, select, selectFunc } = useContext(Values) 
     const letter = value||word[key]
     const selected = select === key
-    const flip = stage !== 2 
+    
 
     const handleClick = ( )=>{
 
@@ -17,7 +17,6 @@ const InputSquare = ({ value, key, stage})=>{
 
     const inputSquare = styled(Box)(({ theme }) => ({
               
-        transform: flip&&'rotateX(180deg)',
         backgroundColor: theme.palette.background.default,
         border: theme.shape.border.main,
         borderBottom:selected?theme.shape.border.mainDouble:theme.shape.border.md,
@@ -44,6 +43,8 @@ const InputSquare = ({ value, key, stage})=>{
 
     )
 }
+
+export default InputSquare
 
 
 
