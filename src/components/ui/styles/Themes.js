@@ -16,6 +16,8 @@ const Themes = {
             border:{
                 main:'6px solid',
                 md:'4px solid',
+                mainDouble:'12px solid',
+                mdDouble:'8px solid',
             }
         }
     },
@@ -37,6 +39,8 @@ const Themes = {
             border:{
                 main:'6px solid',
                 md:'4px solid',
+                mainDouble:'12px solid',
+                mdDouble:'8px solid',
             }
         }
     }
