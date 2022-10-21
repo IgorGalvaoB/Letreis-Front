@@ -9,14 +9,15 @@ const EmptySquare = ()=>{
         opacity: '0.7',
         borderRadius: theme.shape.borderRadius * 1.2,
         backfaceVisibility: 'hidden',
-        position: 'relative',
+        position: 'absolute',
         width: '100px',
         aspectRatio:'1/1',
+        transform: 'rotateY(-90deg) translateX(50%) rotateY(90deg)'
     
     }))
 
     return(
-       <StyBox></StyBox> 
+       <StyBox/> 
     )
 
 }

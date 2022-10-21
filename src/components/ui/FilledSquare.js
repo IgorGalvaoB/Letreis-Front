@@ -2,30 +2,29 @@ import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-const FilledSquare = ({value , stage , success})=>{
+const FilledSquare = ({ success })=>{
     const theme = useTheme()
-    let backGroundColor = null
-    const fliped = stage === 3
-    console.log(stage)
+    
     const backGroundFunc = ()=>{
        
         switch(success){
-            case 1: backGroundColor = theme.palette.warning.main;
-                    break;
-            case 2: backGroundColor = theme.palette.success.main;
-                    break;
-            default: backGroundColor = theme.palette.secondary.main;
-                    break;
+
+            case 1: return theme.palette.warning.main;
+        
+            case 2: return theme.palette.success.main;
+                    
+            default: return theme.palette.secondary.main;
+
         }
     }
 
-    backGroundFunc()
+    
 
    
     const StyBox = styled(Box)(({ theme })=>({
         
-        transform:'rotateX(180deg)',
-        backgroundColor: `${backGroundColor}`,
+        transform:'rotateY(-90deg) translateX(-50%) rotateY(90deg)',
+        backgroundColor: `${backGroundFunc()}`,
         opacity: '1',
         borderRadius: theme.shape.borderRadius * 1.2,
         backfaceVisibility: 'hidden',
@@ -34,13 +33,9 @@ const FilledSquare = ({value , stage , success})=>{
         aspectRatio:'1/1',
 
     }))
-    const StyTypography = styled(Typography)(({ theme })=>({
-
-    }))
+   
     return(
-        <StyBox>
-            <StyTypography>{value}</StyTypography>
-        </StyBox>
+        <StyBox/>
     )
 }
 

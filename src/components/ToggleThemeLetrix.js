@@ -1,4 +1,4 @@
-import Letrix from './Letrix.js';
+import Letreis from './Letreis.js';
 import Themes from './ui/styles/Themes.js';
 import { createContext, useState, useMemo } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -18,7 +18,7 @@ const ToggleThemeLetrix = () => {
     return (
         <ThemeContext.Provider value={toggleTheme}>
             <ThemeProvider theme={theme}>
-                <Letrix></Letrix>
+                <Letreis></Letreis>
             </ThemeProvider>
         </ThemeContext.Provider>
     )
