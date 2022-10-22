@@ -10,7 +10,7 @@ const Cube = ( { deg, id, word } )=>{
           
         backgroundColor: 'black',
         borderRadius: theme.shape.borderRadius * 1.2,
-        width: '100%',
+        width: '100px',
         aspectRatio:'1/1',
         transform: `rotateY(${deg}deg)`,
     

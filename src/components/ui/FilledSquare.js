@@ -23,7 +23,7 @@ const FilledSquare = ({ success })=>{
    
     const StyBox = styled(Box)(({ theme })=>({
         
-        transform:'rotateY(-90deg) translateX(-50%) rotateY(90deg)',
+        transform:'rotateY(90deg)' ,
         backgroundColor: `${backGroundFunc()}`,
         opacity: '1',
         borderRadius: theme.shape.borderRadius * 1.2,
