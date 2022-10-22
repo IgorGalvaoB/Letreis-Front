@@ -1,7 +1,6 @@
 import { Typography } from '@mui/material';
 import Box  from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
-import { useMemo } from 'react';
 
 
 const InputSquare = ( { select, id, letter } )=>{
@@ -37,7 +36,11 @@ const InputSquare = ( { select, id, letter } )=>{
 
     return(
 
-        <StyBox><Typography variant='h2'>{letter}</Typography> </StyBox>
+        <StyBox>
+            <Typography variant='h2'>
+                {letter}
+            </Typography> 
+        </StyBox>
 
     )
 }

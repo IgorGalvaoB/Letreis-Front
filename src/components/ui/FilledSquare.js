@@ -36,7 +36,13 @@ const FilledSquare = ({ success, letter })=>{
     }))
    
     return(
-        <StyBox><Typography variant='h2'>{letter}</Typography></StyBox>
+
+        <StyBox>
+            <Typography variant='h2'>
+                {letter}
+            </Typography>
+        </StyBox>
+        
     )
 }
 
