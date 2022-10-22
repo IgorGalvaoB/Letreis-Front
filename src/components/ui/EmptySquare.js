@@ -5,14 +5,14 @@ const EmptySquare = ()=>{
     
     const StyBox = styled(Box)(({ theme }) => ({
           
-        backgroundColor: 'black',
+        backgroundColor: theme.palette.secondary.main,
         opacity: '0.7',
         borderRadius: theme.shape.borderRadius * 1.2,
         backfaceVisibility: 'hidden',
         position: 'absolute',
-        width: '100px',
+        width: '100%',
         aspectRatio:'1/1',
-        transform: 'rotateY(-90deg) translateX(50%) rotateY(90deg)'
+        transform:'rotateY(-90deg) translateX(50%) rotateY(90deg)',
     
     }))
 

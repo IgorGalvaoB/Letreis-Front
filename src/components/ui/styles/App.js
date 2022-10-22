@@ -9,6 +9,7 @@ const App = () => {
     const theme = useTheme()
     const [deg, setDeg] = useState(0)
     const FrontBox = styled(Box)(({ theme }) => ({
+
         backgroundColor: 'black',
         opacity: '0.7',
         border: '3px solid black',
@@ -52,7 +53,7 @@ const App = () => {
     const MotherBox = styled(Box)(({ theme }) => ({
 
         position: 'relative',
-        width: '100px',
+        width: '20px',
         transformStyle: 'preserve-3d',
         transform: `rotateY(${deg}deg)`,
         aspectRatio: '1/1',
@@ -74,19 +75,18 @@ const App = () => {
     }
     const Div = {
 
-        width: '100px',
-        height: '100px',
-        
+        width: '40px',
+        aspectRatio:'1/1',
         transformStyle: 'preserve-3d',
         transform: `rotateY(${deg}deg)`,
         aspectRatio: '1/1',
-
         transitionDuration: '0.7s',
+        
     }
 
     let motherDiv = {
-        width: '100px',
-        height: '100px',
+        width: '100%',
+        height: '100%',
 
         position: 'relative',
         transformStyle: 'preserve-3d',
@@ -132,10 +132,10 @@ const App = () => {
             </div>
 
             <div style={{
-                width: '100px',
-                height: '100px',
-                perspective: '300px',
-                marginBottom:'300px'
+                width: '30px',
+                height: '30px',
+                perspective: '80px',
+                marginBottom:'100px'
             }}>
             <div style={{ ...motherDiv,transition:'0.7s 0.2s', boxSizing: 'border-box'}}>
                 <RightBox></RightBox>
