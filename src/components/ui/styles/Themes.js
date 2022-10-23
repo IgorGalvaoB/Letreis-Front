@@ -1,5 +1,17 @@
 const Themes = {
     lightTheme: {
+        keys:['xs','sm','lsm','md','lg','xl'],
+        breakpoints:{
+            values:{
+                xs:0,
+                sm:600,
+                lsm:750,
+                md:900,
+                lg:1200,
+                xl:1536,
+            }
+        },
+
         palette: {
             mode: 'light',
             primary: {
@@ -14,33 +26,42 @@ const Themes = {
         },
         shape:{
             border:{
-                main:'6px solid',
-                md:'4px solid',
-                mainDouble:'10px solid',
-                mdDouble:'8px solid',
+                xs: '4px solid',
+                xs2: '8px solid',
+                lsm: '6px solid',
+                lsm2: '12px solid',
+                md: '9px solid',
+                md2: '18px solid',
             }
         }
     },
 
     darkTheme: {
+        keys:['xs','sm','lsm','md','lg','xl'],
+        breakpoints:{
+            values:{
+                xs:0,
+                sm:600,
+                lsm:750,
+                md:900,
+                lg:1200,
+                xl:1536,
+            }
+        },
         palette: {
             mode: 'dark',
             primary: {
-                main: '#'
+                main: '#7D746',
             },
-            background: {
-                default: '#',
-            },
-            borderColor:{
-                main:'#'
-            }
         },
         shape:{
             border:{
-                main:'6px solid',
-                md:'4px solid',
-                mainDouble:'10px solid',
-                mdDouble:'8px solid',
+                xs: '4px solid',
+                xs2: '8px solid',
+                lsm: '6px solid',
+                lsm2: '12px solid',
+                md: '9px solid',
+                md2: '18px solid',
             }
         }
     }
