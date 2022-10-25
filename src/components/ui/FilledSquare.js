@@ -2,12 +2,12 @@ import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-const FilledSquare = ({ success, letter })=>{
+const FilledSquare = ({ successBackground, letter })=>{
     const theme = useTheme()
     
-    const backgroundFunc = ()=>{
+    const backgroundColor = ()=>{
        
-        switch(success){
+        switch(successBackground){
 
             case 1: return theme.palette.warning.main;
         
@@ -25,13 +25,23 @@ const FilledSquare = ({ success, letter })=>{
         display:'flex',
         flexDirection:'column',
         justifyContent:'center',
-        backgroundColor: `${backgroundFunc()}`,
+        backgroundColor: `${backgroundColor()}`,
         opacity: '1',
-        borderRadius: theme.shape.borderRadius * 1.2,
+        borderRadius:theme.shape.borderRadius *3.5,
         backfaceVisibility: 'hidden',
         position: 'absolute',
         height: '100%',
         aspectRatio:'1/1',
+        [theme.breakpoints.down('lsm')]:{
+            
+            borderRadius: theme.shape.borderRadius * 3,
+
+        },
+        [theme.breakpoints.down('sm')]:{
+
+            borderRadius: theme.shape.borderRadius * 2,
+
+        },
 
     }))
    
@@ -42,7 +52,7 @@ const FilledSquare = ({ success, letter })=>{
                 {letter}
             </Typography>
         </StyBox>
-        
+
     )
 }
 
