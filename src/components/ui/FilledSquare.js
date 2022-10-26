@@ -32,6 +32,7 @@ const FilledSquare = ({ successBackground, letter })=>{
         position: 'absolute',
         height: '100%',
         aspectRatio:'1/1',
+        color:'white',
         [theme.breakpoints.down('lsm')]:{
             
             borderRadius: theme.shape.borderRadius * 3,

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 /* import { useTheme, styled, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'; */
 import EmptySquare from './EmptySquare.js';
 import InputSquare from './InputSquare.js';
@@ -7,7 +7,10 @@ import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { keyframes } from '@mui/system';
 
+
 const Cube = ({ deg, id, word, backWord, select, setSelect, success }) => {
+   
+    
 
     const jump = keyframes`
         0% {
@@ -29,7 +32,7 @@ const Cube = ({ deg, id, word, backWord, select, setSelect, success }) => {
 
         width: '100%',
         aspectRatio: '1/1',
-        animation: success&&`${jump} 0.7s ${0.1 * id}s both`,
+        animation: success[0]&&`${jump} ${0.7}s ${(0.1 * id)+1.9}s both`,
         transformStyle: 'preserve-3d',
 
     });
@@ -51,7 +54,7 @@ const Cube = ({ deg, id, word, backWord, select, setSelect, success }) => {
                 <RotatedBox>
                     <EmptySquare />
                     <InputSquare setSelect={() => setSelect(id)} id={id} letter={word[id]} select={select} />
-                    <FilledSquare successBackground={backWord[id][1]} letter={backWord[id][0]} />
+                    <FilledSquare  successBackground={backWord[id][1]} letter={backWord[id][0]}/>
                 </RotatedBox>
             </div>
         </div>

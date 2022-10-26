@@ -26,6 +26,7 @@ const InputSquare = ( { select, id, letter,setSelect } )=>{
         justifyContent:'center',
         height:'100%',
         transform:'translateX(-50%) rotateY(-90deg)',
+        color:'white',
 
         [theme.breakpoints.down('lsm')]:{
 

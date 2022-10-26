@@ -11,7 +11,11 @@ const Themes = {
                 xl:1536,
             }
         },
-
+        typography:{
+            h2:{
+                fontWeight:900,
+            }
+        },
         palette: {
             mode: 'light',
             primary: {
