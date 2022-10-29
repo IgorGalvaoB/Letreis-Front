@@ -49,7 +49,7 @@ const Cube = ({ deg, id, word, backWord, select, setSelect, success }) => {
     }
 
     return (
-        <div style={{ perspective: '500px', width: '100%' }}>
+        <div style={{ perspective: '500px', width: '100%' }}>{/*stylize div*/} 
             <div style={{ ...motherDiv }}>
                 <RotatedBox>
                     <EmptySquare />

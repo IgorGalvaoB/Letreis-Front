@@ -1,7 +1,7 @@
 import dicio from '../data/dicio';
 import Axios from 'axios';
-const validateWord = async (word,setCommands) => {
-    setCommands(false)
+const validateWord = async (word) => {
+    
     if (word.length !== 6) return false
     const compare = async (word2) => {
         const wordLowerCase = word2.toLowerCase()
@@ -46,7 +46,7 @@ const validateWord = async (word,setCommands) => {
             return prev+current
         })
       
-        setCommands(true)
+        
         return answer?[answer,reducer]:false
     }
 

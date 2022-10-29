@@ -1,22 +1,27 @@
-
 import { useEffect } from "react";
 import { useRef } from "react";
 import FullGrid from "./ui/FullGrid";
-
+import AppBar from '@mui/material/AppBar';
+import CssBaseline from '@mui/material/CssBaseline'
 function Letreis() {
+  const ref = useRef(null)
   useEffect(() => {
-
     ref.current.focus()
-    console.log(ref)
   }, [])
+
   const handleClick = () => {
     ref.current.focus()
   }
-  const ref = useRef(null)
   return (
-    <div style={{ width: '100vw', height: '99vh'}} onClick={handleClick} >
-      <FullGrid ref={ref}></FullGrid>
-    </div>
+    <>
+      <CssBaseline />
+      <div style={{ width: '100%', height: '100%' }} onClick={handleClick} >
+        <AppBar position="static" color="primary">
+          <div style={{ height: '60px' }}></div>
+        </AppBar>
+        <FullGrid ref={ref}></FullGrid>
+      </div>
+    </>
 
   );
 }

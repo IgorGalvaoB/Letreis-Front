@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/static/js/main.d452e123.js",
+    "static/media/dicio": "/static/media/dicio.56a53515a3cdec630218",
+    "index.html": "/index.html",
+    "main.d452e123.js.map": "/static/js/main.d452e123.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d452e123.js"
+  ]
+}
