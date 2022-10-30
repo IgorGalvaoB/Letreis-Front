@@ -11,13 +11,14 @@ const ATTEMPTS_NUMBER = 8
 const FullGrid = forwardRef((props, ref) => {
 
     const [rotation, setRotation] = useState(new Array(ATTEMPTS_NUMBER).fill().map((item, index) => index === 0 ? 90 : 0))
-    const [backWords, setBackWords] = useState(new Array(8).fill().map(element => [['', 0], ['', 0], ['', 0], ['', 0], ['', 0], ['', 0], false]))
+    const [backWords, setBackWords] = useState(new Array(ATTEMPTS_NUMBER).fill().map(element => [['', 0], ['', 0], ['', 0], ['', 0], ['', 0], ['', 0], false]))
     const [select, setSelect] = useState(0)
     const [valid, setValid] = useState(false)
     const [word, setWord] = useState(['', '', '', '', '', ''])
     const [commands, setCommands] = useState(true)
     const [current, setCurrent] = useState(0)
     const [won, setWon] = useState(false)
+
     const arrWords = rotation.map((item, index) => {
         return (
             <GridWord key={index} result={valid} word={word} rotation={rotation[index]} select={select} setSelect={setSelect} backWord={backWords[index]}></GridWord>
