@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import FullGrid from "./ui/FullGrid";
 import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline'
+
 function Letreis() {
   const ref = useRef(null)
   useEffect(() => {
@@ -14,7 +14,7 @@ function Letreis() {
   }
   return (
     <>
-      <CssBaseline />
+      
       <div style={{ width: '100%', height: '100%' }} onClick={handleClick} >
         <AppBar position="static" color="primary">
           <div style={{ height: '60px' }}></div>

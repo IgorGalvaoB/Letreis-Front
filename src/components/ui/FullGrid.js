@@ -27,10 +27,11 @@ const FullGrid = forwardRef((props, ref) => {
 
 
     const handleKeyDown = async (e) => {
+   
         if (!commands || won) return
 
-
         if (e.keyCode === 8) {
+           
             const auxWordDel = [...word]
             if (select >= 5 || select === null) {
                 console.log('aki')
@@ -75,7 +76,7 @@ const FullGrid = forwardRef((props, ref) => {
             const returned = await validateWord(word.join(''), setCommands, setWon)
 
             if (returned) {
-                await animationController(backWords, setBackWords, rotation, setRotation, word, setWord, current, setCurrent, returned)
+                await animationController(backWords, setBackWords, rotation, setRotation, setWord, current, setCurrent, returned)
                 setSelect(0)
                 setTimeout(() => {
                     setCommands(true)
@@ -122,7 +123,7 @@ const FullGrid = forwardRef((props, ref) => {
 
 
     return (
-        <Container ref={ref} maxWidth="sm" sx={{ outline: 'none', marginTop: '5px' }} tabIndex='-1' onKeyDown={handleKeyDown}>
+        <Container ref={ref} maxWidth='sm' sx={{ outline: 'none', marginTop: '5px' }} tabIndex='-1' onKeyDown={handleKeyDown}>
             <Grid container columns={1} sx={{ width: '100%' }} rowSpacing={{ xs: 1 }}>
                 {arrWords}
             </Grid>

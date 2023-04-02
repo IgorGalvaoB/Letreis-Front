@@ -1,4 +1,4 @@
-const animationController = async (backWords, setBackWords, rotation, setRotation, word, setWord, current, setCurrent, returned,setWon) => {
+const animationController = async (backWords, setBackWords, rotation, setRotation, setWord, current, setCurrent, returned,setWon) => {
     if (current > 7) return
     let cur = current
     const success = returned[1] === 12
@@ -25,29 +25,9 @@ const animationController = async (backWords, setBackWords, rotation, setRotatio
         }
 
     }
-    
+    console.log(returned,backWords)
     
     await firstStep()
-  
-    
-
-
-
-
-
-    /*  if(current>8)return
-     let auxBack = [...backWords]
-     auxBack[current]=[...returned[0],returned[1]===12]
-     setBackWords([...returned])
-     let auxRotation = [...rotation]
-     auxRotation[current] = auxRotation[current]+90
-     setRotation([...auxRotation])
-     setWord(['','','','','',''])
-     if(current<8){
-         auxRotation = [...rotation]
-         auxRotation[current+1] = auxRotation[current+1]+90
-         setRotation([...auxRotation])
-     } */
 
 }
 export default animationController
